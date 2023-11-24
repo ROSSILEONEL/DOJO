@@ -16,12 +16,15 @@ export function CrudTable({ data,setDataToEdit,deleteData }) {
         <tbody>
           {/* eslint-disable */}
           {/* componente Row */}
-          {data.length === 0 ? (
+          {data.length > 0 ? (
+            
+            data.map((el) => <CrudTableRow key={el.id} el={el} setDataToEdit={setDataToEdit} deleteData={deleteData}/>)
+          )
+           : 
+          (
             <tr className="border-black text-center">
               <td >Sin datos</td>
             </tr>
-          ) : (
-            data.map((el) => <CrudTableRow key={el.id} el={el} setDataToEdit={setDataToEdit} deleteData={deleteData}/>)
           )}
         </tbody>
       </table>
