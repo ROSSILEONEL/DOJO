@@ -50,3 +50,7 @@ input:focus{
   outline: 1px solid green;
   border-bottom: 1px solid skyblue
 }
+textarea{
+  border: 1px solid grey;
+  resize: none;
+}

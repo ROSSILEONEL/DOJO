@@ -1,0 +1,38 @@
+.modal{
+    position: fixed;
+    z-index: 999; 
+    /* z-index para que se superponga el modal */
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgba(0,0,0,.75);
+    
+    display : none  /* oculto el modal */
+}
+
+.modal.is-open{
+    display: flex;
+justify-content: center;
+align-items: center;
+}
+.modal-container{
+    position : relative;
+    padding: 1rem;
+    max-width: 480px;
+    min-width: 320px;
+    max-height: 600px;
+    min-height: 200px;
+    overflow-y: auto;
+    /* si la imagen es mas grande que el modal con overflow-y auto puedo hacer scroll */
+    background-color: white;
+}
+
+.modal-close{
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    padding: 1rem;
+    cursor: pointer;
+}
+
